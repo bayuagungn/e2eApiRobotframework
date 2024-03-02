@@ -1,0 +1,63 @@
+{
+  "type": "object",
+  "properties": {
+    "access_token": {"type": "string"},
+    "token_type": {"type": "string"},
+    "expires_in": {"type": "integer"},
+    "expires_at": {"type": "integer"},
+    "refresh_token": {"type": "string"},
+    "user": {
+      "type": "object",
+      "properties": {
+        "id": {"type": "string"},
+        "aud": {"type": "string"},
+        "role": {"type": "string"},
+        "email": {"type": "string"},
+        "email_confirmed_at": {"type": "string"},
+        "phone": {"type": "string"},
+        "confirmation_sent_at": {"type": "string"},
+        "confirmed_at": {"type": "string"},
+        "last_sign_in_at": {"type": "string"},
+        "app_metadata": {
+          "type": "object",
+          "properties": {
+            "provider": {"type": "string"},
+            "providers": {
+              "type": "array",
+              "items": {"type": "string"}
+            }
+          }
+        },
+        "user_metadata": {"type": "object"},
+        "identities": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "identity_id": {"type": "string"},
+              "id": {"type": "string"},
+              "user_id": {"type": "string"},
+              "identity_data": {
+                "type": "object",
+                "properties": {
+                  "email": {"type": "string"},
+                  "email_verified": {"type": "boolean"},
+                  "phone_verified": {"type": "boolean"},
+                  "sub": {"type": "string"}
+                }
+              },
+              "provider": {"type": "string"},
+              "last_sign_in_at": {"type": "string"},
+              "created_at": {"type": "string"},
+              "updated_at": {"type": "string"},
+              "email": {"type": "string"}
+            }
+          }
+        },
+        "created_at": {"type": "string"},
+        "updated_at": {"type": "string"}
+      }
+    }
+  },
+  "required": ["access_token", "token_type", "expires_in", "expires_at", "refresh_token", "user"]
+}
